@@ -15,18 +15,18 @@ GetLoadout.prototype.Register = function( Socket ) {
 
 GetLoadout.prototype.ProcessEvent = function( uuid, callback ) {
 
+    console.log('Request for a Loadout Received')
     // Request the loadout from the 1st RRF server
     var apiRequest = popsicle('https://1st-rrf.com/api/loadout/' + uuid)
 
+
     // Once the api Request is complete, reformat the the data into an array of couplets
-    apiRequest.then( function(response) {
+    apiRequest.then(function(response) {
 
-        return response.body
+        console.log('Loadout received from server')
+        return JSON.parse(response.body)
 
-    } ).then( function(body) {
-
-        // Attempt to parse JSON
-        var body = JSON.parse(response.body)
+    }).then( function(body) {
 
         // Format the body into an array
         var loadout = _.map(body.loadout, function (item) {
@@ -39,6 +39,7 @@ GetLoadout.prototype.ProcessEvent = function( uuid, callback ) {
 
     } ).then( function(loadout) {
 
+        console.log('Loadout pushed to client')
         callback(null, loadout)
 
     }).catch( function(error) {
