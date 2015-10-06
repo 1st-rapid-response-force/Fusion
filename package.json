@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/1st-rapid-response-force/Fusion#readme",
   "dependencies": {
+    "analytics-node": "^2.0.0",
     "dotenv": "^1.2.0",
     "lodash": "^3.10.1",
     "popsicle": "^1.1.1",
