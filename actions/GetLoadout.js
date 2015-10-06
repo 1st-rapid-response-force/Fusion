@@ -14,7 +14,7 @@ GetLoadout.prototype.Register = function( Socket ) {
 }
 
 GetLoadout.prototype.ProcessEvent = function( uuid, callback ) {
-    
+
     // Request the loadout from the 1st RRF server
     var apiRequest = popsicle('https://1st-rrf.com/api/loadout/' + uuid)
 
