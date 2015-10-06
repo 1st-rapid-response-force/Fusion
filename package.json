@@ -1,0 +1,25 @@
+{
+  "name": "fusion",
+  "version": "1.0.0",
+  "description": "Dedicated server side implementation of functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://AJCStriker@github.com/1st-rapid-response-force/Fusion.git"
+  },
+  "author": "Striker.A",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1st-rapid-response-force/Fusion/issues"
+  },
+  "homepage": "https://github.com/1st-rapid-response-force/Fusion#readme",
+  "dependencies": {
+    "dotenv": "^1.2.0",
+    "lodash": "^3.10.1",
+    "popsicle": "^1.1.1",
+    "sock-rpc": "^1.0.6"
+  }
+}
