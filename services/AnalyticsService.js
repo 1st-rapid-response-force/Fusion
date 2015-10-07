@@ -9,7 +9,7 @@ function RRFAnalytics () {
 
 }
 
-RRFAnalytics.prototype.requestedLoadout(uuid) {
+RRFAnalytics.prototype.requestedLoadout = function(uuid) {
 
     Analytics.track({
         userId: uuid,
