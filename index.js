@@ -33,7 +33,7 @@ Mongoose.connect(process.env.MONGO_URI, mongooseOptions)
     SaveEquipmentAction.Register(Socket)
 
     // Save Position Action
-    var SavePositionAction = require( './actions/SavePositionAction' )
+    var SavePositionAction = require( './actions/SavePosition' )
     SavePositionAction.Register(Socket)
 
     // Restore Equipment Action
