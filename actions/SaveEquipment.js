@@ -1,23 +1,18 @@
 var AnalyticsService = require( '../services/AnalyticsService' ),
     User = require( '../models/User' )
 
-function GetLoadout() {
+function SaveEquipment() {
 
 }
 
-GetLoadout.prototype.Register = function( Socket ) {
+SaveEquipment.prototype.Register = function( Socket ) {
 
     // Connect the callback to the socket
     Socket.register('SAVE_PLAYER_INVENTORY', this.ProcessEvent)
 
 }
 
-GetLoadout.prototype.ProcessEvent = function( content, callback ) {
-
-    // Process the UUID out
-    var uuid = content[0][1]
-
-    var content_array = content
+SaveEquipment.prototype.ProcessEvent = function( uuid, content, callback ) {
 
     User.findOneAndUpdate({
 
@@ -26,7 +21,7 @@ GetLoadout.prototype.ProcessEvent = function( content, callback ) {
     }, {
 
         uuid: uuid,
-        inventory: content_array
+        inventory: content
 
     }, {
 
@@ -41,4 +36,4 @@ GetLoadout.prototype.ProcessEvent = function( content, callback ) {
 
 }
 
-module.exports = new GetLoadout()
+module.exports = new SaveEquipment()

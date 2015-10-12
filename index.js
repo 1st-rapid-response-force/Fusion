@@ -31,6 +31,22 @@ var LoadoutService = require( './services/LoadoutService' )
     var GetLoadoutAction = require( './actions/GetLoadout' )
     GetLoadoutAction.Register(Socket)
 
+    // Save Equipment Action
+    var SaveEquipmentAction = require( './actions/SaveEquipment' )
+    SaveEquipmentAction.Register(Socket)
+
+    // Save Position Action
+    var SavePositionAction = require( './actions/SavePositionAction' )
+    SavePositionAction.Register(Socket)
+
+    // Restore Equipment Action
+    var RestoreEquipmentAction = require( './actions/RestoreEquipment' )
+    RestoreEquipmentAction.Register(Socket)
+
+    // Restore Position Action
+    var RestorePositionAction = require( './actions/RestorePosition' )
+    RestorePositionAction.Register(Socket)
+
 Mongoose.connect(process.env.MONGO_URI, mongooseOptions)
 
 var Bridge = Socket.listen('localhost', 9999)

@@ -9,6 +9,18 @@ var userSchema = new Schema({
 
     inventory: {
         type: Schema.Types.Mixed
+    },
+
+    position: {
+        x: {
+            type: Number
+        },
+        y: {
+            type: Number
+        },
+        z: {
+            type: Number
+        }
     }
 
 })
