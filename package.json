@@ -20,6 +20,7 @@
     "analytics-node": "^2.0.0",
     "dotenv": "^1.2.0",
     "lodash": "^3.10.1",
+    "mongoose": "^4.1.10",
     "popsicle": "^1.1.1",
     "sock-rpc": "^1.0.6"
   }

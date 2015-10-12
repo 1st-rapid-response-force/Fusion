@@ -22,9 +22,6 @@ var mongooseOptions = {
 
 Mongoose.connect(process.env.MONGO_URI, mongooseOptions)
 
-// Establish Serivces
-var LoadoutService = require( './services/LoadoutService' )
-
 // Register actions
 
     // Get Loadout Action
