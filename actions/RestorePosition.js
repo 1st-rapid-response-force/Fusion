@@ -14,7 +14,7 @@ RestorePosition.prototype.Register = function( Socket ) {
 
 RestorePosition.prototype.ProcessEvent = function( uuid, callback ) {
 
-    User.find({
+    User.findOne({
 
         uuid: uuid
 

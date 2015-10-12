@@ -14,7 +14,7 @@ RestoreEquipment.prototype.Register = function( Socket ) {
 
 RestoreEquipment.prototype.ProcessEvent = function( uuid, callback ) {
 
-    User.find({
+    User.findOne({
 
         uuid: uuid
 
