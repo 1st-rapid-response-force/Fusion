@@ -14,11 +14,15 @@ RestoreEquipment.prototype.Register = function( Socket ) {
 
 RestoreEquipment.prototype.ProcessEvent = function( uuid, callback ) {
 
-    User.findById({
+    User.find({
 
         uuid: uuid
 
     }, function(err, doc){
+
+        if ( ! doc ) {
+            callback('Error')
+        }
 
         callback(err, doc.inventory)
 
