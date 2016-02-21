@@ -12,7 +12,7 @@ module.exports = function( socket, function_name, implementation ) {
 
     implementation(argument)
       .then(function(response) {
-        callback(err, response)
+        callback(null, response)
       })
       .catch(function(error) {
         callback(error)

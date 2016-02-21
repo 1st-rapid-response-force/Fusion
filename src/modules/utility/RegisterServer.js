@@ -9,8 +9,11 @@ var winston = require('winston'),
 
 var registerServer = function (arguments) {
 
-  var index_id = ServerStore.register(arguments.name, arguments.map)
-  winston.info('New server initialized - ' + arguments.name + " running " + arguments.map)
+  var name = arguments[0][1],
+    map = arguments[1][1]
+
+  var index_id = ServerStore.register(name, map)
+  winston.info('New server initialized - ' + name + " running " + map)
 
   return Promise.resolve(index_id)
 }
