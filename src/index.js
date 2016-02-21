@@ -22,6 +22,6 @@ var register = require('./wrappers/RegisterRPC')
 
 // Register Connection Establish
 var registerServerHandler = require('./modules/utility/RegisterServer')
-register(rpc, registerServerHandler)
+register(rpc, 'register_server', registerServerHandler)
 
 rpc.listen('localhost', 4000)
