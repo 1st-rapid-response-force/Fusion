@@ -20,7 +20,7 @@ module.exports = function( socket, function_name, implementation ) {
       .finally(function() {
         // Record run time and pass to analytics
         var finish_time = Date.now(),
-          execution_time = finish_time.getTime() - start_time.getTime()
+          execution_time = finish_time - start_time
 
         executionTimeAnalytics.record(function_name, execution_time)
         winston.info('RPC Call Finished - ' + function_name + " - Execution Time: " + execution_time + "ms")
