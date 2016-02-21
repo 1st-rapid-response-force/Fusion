@@ -2,5 +2,15 @@
   "name": "fusion",
   "description": "Fusion is the 1st RRF's socket server for communicating with an ARMA 3 server",
   "version": "0.0.1",
-  "main": "src/index.js"
+  "main": "src/index.js",
+  "dependencies": {
+    "bluebird": "^3.3.1",
+    "bookshelf": "^0.9.2",
+    "dotenv": "^2.0.0",
+    "knex": "^0.10.0",
+    "winston": "^2.1.1"
+  },
+  "scripts": {
+    "start": "node src/index"
+  }
 }
