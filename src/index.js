@@ -20,8 +20,24 @@ var rpc = require('sock-rpc')
 // Register function calls
 var register = require('./wrappers/RegisterRPC')
 
+/*
+  Load Utility Functions
+*/
+
 // Register Connection Establish
 var registerServerHandler = require('./modules/utility/RegisterServer')
 register(rpc, 'register_server', registerServerHandler)
+
+/*
+  Load Analytics Events
+*/
+
+// Register Playtime Handler
+var playtimeAnalyticsHandler = require('./modules/analytics/Playtime')
+register(rpc, 'analytics_playtime', playtimeAnalyticsHandler)
+
+// Register Death Handler
+var deathAnalyticsHandler = require('./modules/analytics/Death')
+register(rpc, 'analytics_death', deathAnalyticsHandler)
 
 rpc.listen('localhost', 4000)
