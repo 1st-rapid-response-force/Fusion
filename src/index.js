@@ -25,6 +25,8 @@ var register = require('./wrappers/RegisterRPC')
   Load Utility Functions
 */
 
+winston.info('Loading Utility Functions')
+
 // Register Connection Establish
 var registerServerHandler = require('./modules/utility/RegisterServer')
 register(rpc, 'register_server', registerServerHandler)
@@ -33,6 +35,8 @@ register(rpc, 'register_server', registerServerHandler)
   Load Analytics Events
 */
 
+winston.info('Loading Analytics Functions')
+
 // Register Playtime Handler
 var playtimeAnalyticsHandler = require('./modules/analytics/Playtime')
 register(rpc, 'analytics_playtime', playtimeAnalyticsHandler)
@@ -40,5 +44,15 @@ register(rpc, 'analytics_playtime', playtimeAnalyticsHandler)
 // Register Death Handler
 var deathAnalyticsHandler = require('./modules/analytics/Death')
 register(rpc, 'analytics_death', deathAnalyticsHandler)
+
+/*
+  Load Persistence Functions
+*/
+
+winston.info('Loading Persistence Functions')
+
+// Register Save Position Handler
+var savePositionHandler = require('./modules/persistence/savePosition')
+register(rpc, 'save_position', savePositionHandler)
 
 rpc.listen('localhost', 4000)
