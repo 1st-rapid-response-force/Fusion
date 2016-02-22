@@ -6,6 +6,7 @@ winston.info('Fusion Startup Sequence Initiated')
 // Use dotenv to load environment
 winston.info('Bootstraping environment')
 var dotenv = require('dotenv')
+dotenv.config()
 winston.info('Environmental variables loaded')
 
 // Intialize SQL Connection
