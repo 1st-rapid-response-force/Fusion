@@ -52,7 +52,11 @@ register(rpc, 'analytics_death', deathAnalyticsHandler)
 winston.info('Loading Persistence Functions')
 
 // Register Save Position Handler
-var savePositionHandler = require('./modules/persistence/savePosition')
+var savePositionHandler = require('./modules/persistence/SavePosition')
 register(rpc, 'save_position', savePositionHandler)
+
+// Register Restore Position handler
+var restorePositionHandler = require('./modules/persistence/RestorePosition')
+register(rpc, 'restore_position', restorePositionHandler)
 
 rpc.listen('localhost', 4000)
