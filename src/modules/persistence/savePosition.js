@@ -10,15 +10,13 @@ module.exports = function(arguments) {
    Expects the following arguments
     arguments = [
       serverID,
-      [
-        position[x, y, z],
-        playerID
-      ]
+      playerID,
+      position[x, y, z]
     ]
   */
   var serverID = arguments[0],
-    position = arguments[1][0],
-    playerID = arguments[1][1]
+    position = arguments[2],
+    playerID = arguments[1]
 
   // Retrieve the map information
   var server = ServerStore.retrieve(serverID),

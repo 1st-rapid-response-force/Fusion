@@ -5,6 +5,7 @@ var winston = require('winston'),
 
 module.exports = function( socket, function_name, implementation ) {
 
+  winston.info('Wrapper initialized for function ' + function_name)
   socket.register(function_name, function(argument, callback) {
 
     winston.info('RPC Call recevied - ' + function_name)
