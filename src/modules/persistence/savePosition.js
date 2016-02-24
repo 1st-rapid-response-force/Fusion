@@ -39,7 +39,8 @@ module.exports = function(arguments) {
       result.set({
         x: position[0],
         y: position[1],
-        z: position[2]
+        z: position[2],
+        updated_at: Date.now()
       })
 
       return result.save()
@@ -52,7 +53,9 @@ module.exports = function(arguments) {
         map: map,
         x: position[0],
         y: position[1],
-        z: position[2]
+        z: position[2],
+        updated_at: Date.now(),
+        created_at: Date.now()
       })
 
       return new_position.save()
