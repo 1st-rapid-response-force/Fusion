@@ -1,7 +1,7 @@
 var bookshelf = require('../Postgre')
 
 var Position = bookshelf.Model.extend({
-  tableName: 'positions'
+  tableName: 'playerPositions'
 })
 
 module.exports = Position

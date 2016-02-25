@@ -59,4 +59,12 @@ register(rpc, 'save_position', savePositionHandler)
 var restorePositionHandler = require('./modules/persistence/RestorePosition')
 register(rpc, 'restore_position', restorePositionHandler)
 
+// Register Save Position handler
+var saveInventoryHandler = require('./modules/persistence/SaveInventory')
+register(rpc, 'save_inventory', savePositionHandler)
+
+// Regist Restore Position handler
+var restoreInventoryHandler = require('./modules/persistence/RestoreInventory')
+register(rpc, 'restore_inventory', restorePositionHandler)
+
 rpc.listen('localhost', 4000)

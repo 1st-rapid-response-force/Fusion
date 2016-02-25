@@ -1,7 +1,7 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('inventories', function(table) {
-    table.increments()
+  return knex.schema.createTable('playerInventories', function(table) {
+    table.increments('id').primary()
     table.string('map')
     table.string('player_guid')
     table.string('inventory')
