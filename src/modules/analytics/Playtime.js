@@ -9,8 +9,13 @@ var winston = require('winston'),
 module.exports = function(arguments) {
 
   // Process the provided information
-  var playerID = arguments[1][0][1],
-    duration = arguments[1][0][1],
+  // [
+  //  serverID,
+  //  playerID,
+  //  duration
+  // ]
+  var playerID = arguments[1],
+    duration = arguments[2],
     serverID = arguments[0]
 
   // Lookup map information
