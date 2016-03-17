@@ -37,10 +37,9 @@ module.exports = function(arguments) {
       return result.get('inventory')
 
     })
-    .catch(Position.NotFoundError, function() {
+    .catch(Inventory.NotFoundError, function() {
 
-      // Failed to retrieve the position, return [0,0,0] so the game server can
-      // correctly init the player
+      // Return false if not found so the server can correctly handle it
       return false
 
     })
