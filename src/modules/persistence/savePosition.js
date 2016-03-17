@@ -40,7 +40,7 @@ module.exports = function(arguments) {
         x: position[0],
         y: position[1],
         z: position[2],
-        updated_at: Date.now()
+        updated_at: new Date()
       })
 
       return result.save()
@@ -54,8 +54,8 @@ module.exports = function(arguments) {
         x: position[0],
         y: position[1],
         z: position[2],
-        updated_at: Date.now(),
-        created_at: Date.now()
+        updated_at: new Date(),
+        created_at: new Date()
       })
 
       return new_position.save()

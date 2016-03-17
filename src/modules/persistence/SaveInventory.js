@@ -37,7 +37,7 @@ module.exports = function(arguments) {
       // Result existed so we need to update it
       result.set({
         inventory: inventoryString,
-        updated_at: Date.now()
+        updated_at: new Date()
       })
 
       return result.save()
@@ -49,8 +49,8 @@ module.exports = function(arguments) {
         player_guid: playerID,
         map: map,
         inventory: inventoryString,
-        updated_at: Date.now(),
-        created_at: Date.now()
+        updated_at: new Date(),
+        created_at: new Date()
       })
 
       return new_inventory.save()
