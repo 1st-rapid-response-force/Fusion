@@ -34,7 +34,7 @@ module.exports = function(arguments) {
     .then(function(result) {
 
       // Return the result to the game engine
-      return result.get('inventory')
+      return JSON.parse(result.get('inventory'))
 
     })
     .catch(Inventory.NotFoundError, function() {

@@ -16,7 +16,7 @@ module.exports = function(arguments) {
   */
   var serverID = arguments[0],
     playerID = arguments[1],
-    inventoryString = arguments[2]
+    inventoryString = JSON.stringify(arguments[2])
 
   // Retrieve the map information
   var server = ServerStore.retrieve(serverID),
