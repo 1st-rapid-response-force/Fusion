@@ -59,16 +59,20 @@ register(rpc, 'save_position', savePositionHandler)
 var restorePositionHandler = require('./modules/persistence/RestorePosition')
 register(rpc, 'restore_position', restorePositionHandler)
 
-// Register Save Position handler
+// Register Save Inventory handler
 var saveInventoryHandler = require('./modules/persistence/SaveInventory')
 register(rpc, 'save_inventory', saveInventoryHandler)
 
-// Regist Restore Position handler
+// Regist Restore Inventory handler
 var restoreInventoryHandler = require('./modules/persistence/RestoreInventory')
 register(rpc, 'restore_inventory', restoreInventoryHandler)
 
-// Register Save Position handler
+// Register Save Medical handler
 var saveMedical = require('./modules/persistence/SaveMedical')
 register(rpc, 'save_medical', saveMedical)
+
+// Register Save Medical handler
+var restoreMedical = require('./modules/persistence/RestoreMedical')
+register(rpc, 'restore_medical', restoreMedical)
 
 rpc.listen('localhost', 4000)
