@@ -20,7 +20,7 @@ module.exports = function(arguments) {
     playerID = arguments[1]
 
   // Load the server information from the server store
-  var map = SererStore.retrieve(serverID).map
+  var map = ServerStore.retrieve(serverID).map
 
   // Load the player position from the datastore
   var query = Position.query({
