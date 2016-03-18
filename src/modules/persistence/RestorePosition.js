@@ -41,9 +41,8 @@ module.exports = function(arguments) {
     })
     .catch(Position.NotFoundError, function() {
 
-      // Failed to retrieve the position, return [0,0,0] so the game server can
-      // correctly init the player
-      return [0,0,0]
+      // Failed to retrieve position so return false to signal to the server
+      return false
 
     })
 
