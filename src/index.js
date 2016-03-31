@@ -75,4 +75,8 @@ register(rpc, 'save_medical', saveMedical)
 var restoreMedical = require('./modules/persistence/RestoreMedical')
 register(rpc, 'restore_medical', restoreMedical)
 
+// Register Save Qualification handler
+var saveQualification = require('./modules/training/SaveQualification')
+register(rpc, 'save_qualification', saveQualification)
+
 rpc.listen('localhost', 4000)
