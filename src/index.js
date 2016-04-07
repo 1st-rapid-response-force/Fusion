@@ -79,4 +79,16 @@ register(rpc, 'restore_medical', restoreMedical)
 var saveQualification = require('./modules/training/SaveQualification')
 register(rpc, 'save_qualification', saveQualification)
 
+// Register Range Begin Handler
+var rangeBegin = require('./modules/training/RangeBegin')
+register(rpc, 'range_begin', rangeBegin)
+
+// Register Range Increment Handler
+var rangeIncrement = require('./modules/training/RangeIncrement')
+register(rpc, 'range_increment', rangeIncrement)
+
+// Register RangeRead Handler
+var rangeRead = require('./modules/training/RangeRead')
+register(rpc, 'range_read', rangeRead)
+
 rpc.listen('localhost', 4000)
