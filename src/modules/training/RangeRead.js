@@ -17,8 +17,6 @@ var rangeRead = function (arguments) {
   var serverID = arguments[0],
     rangeID = arguments[1]
 
-  RangeStore.report(serverID, rangeID)
-
   return Promise.resolve(RangeStore.report(serverID, rangeID))
 }
 
