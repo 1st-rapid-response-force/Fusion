@@ -67,6 +67,14 @@ register(rpc, 'save_inventory', saveInventoryHandler)
 var restoreInventoryHandler = require('./modules/persistence/player/RestoreInventory')
 register(rpc, 'restore_inventory', restoreInventoryHandler)
 
+// Register Player Status handler
+var saveStatusHandler = require('./modules/persistence/player/SaveStatus')
+register(rpc, 'save_player_status', saveStatusHandler)
+
+// Register Player Status handler
+var restoreStatusHandler = require('./modules/persistence/player/RestoreStatus')
+register(rpc, 'restore_player_status', restoreStatusHandler)
+
 // Register Save Qualification handler
 var saveQualification = require('./modules/training/player/SaveQualification')
 register(rpc, 'save_qualification', saveQualification)
