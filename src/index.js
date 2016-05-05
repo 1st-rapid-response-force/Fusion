@@ -52,31 +52,31 @@ register(rpc, 'analytics_death', deathAnalyticsHandler)
 winston.info('Loading Persistence Functions')
 
 // Register Save Position Handler
-var savePositionHandler = require('./modules/persistence/SavePosition')
+var savePositionHandler = require('./modules/persistence/player/SavePosition')
 register(rpc, 'save_position', savePositionHandler)
 
 // Register Restore Position handler
-var restorePositionHandler = require('./modules/persistence/RestorePosition')
+var restorePositionHandler = require('./modules/persistence/player/RestorePosition')
 register(rpc, 'restore_position', restorePositionHandler)
 
 // Register Save Inventory handler
-var saveInventoryHandler = require('./modules/persistence/SaveInventory')
+var saveInventoryHandler = require('./modules/persistence/player/SaveInventory')
 register(rpc, 'save_inventory', saveInventoryHandler)
 
 // Regist Restore Inventory handler
-var restoreInventoryHandler = require('./modules/persistence/RestoreInventory')
+var restoreInventoryHandler = require('./modules/persistence/player/RestoreInventory')
 register(rpc, 'restore_inventory', restoreInventoryHandler)
 
 // Register Save Medical handler
-var saveMedical = require('./modules/persistence/SaveMedical')
+var saveMedical = require('./modules/persistence/player/SaveMedical')
 register(rpc, 'save_medical', saveMedical)
 
 // Register Save Medical handler
-var restoreMedical = require('./modules/persistence/RestoreMedical')
+var restoreMedical = require('./modules/persistence/player/RestoreMedical')
 register(rpc, 'restore_medical', restoreMedical)
 
 // Register Save Qualification handler
-var saveQualification = require('./modules/training/SaveQualification')
+var saveQualification = require('./modules/training/player/SaveQualification')
 register(rpc, 'save_qualification', saveQualification)
 
 // Register Range Begin Handler
