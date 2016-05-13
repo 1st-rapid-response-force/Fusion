@@ -40,7 +40,7 @@ module.exports = function(arguments) {
     .catch(Inventory.NotFoundError, function() {
 
       // Return false if not found so the server can correctly handle it
-      return JSON.parse('["","","TRYK_U_B_ARO1_BLK_CombatUniform",[],"",[],"",[],"",["","","",""],[],"",["","","",""],[],"",["","","",""],[],["ItemMap","ItemCompass","tf_microdagr","tf_anprc152_1"],"",""]')
+      return JSON.parse('[[],[],[],["TRYK_U_B_ARO1_BLK_CombatUniform",[]],[],[],"","",[],["ItemMap","","tf_anprc152_1","ItemCompass","tf_microdagr",""]]')
 
     })
 
