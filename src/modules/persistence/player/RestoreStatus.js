@@ -34,12 +34,12 @@ module.exports = function(arguments) {
     .then(function(result) {
 
       // Return the result to the game engine
-      return JSON.parse([
+      return [
         result.get('medical_status'),
         result.get('sw_radio_channels'),
         result.get('lr_radio_channels')
-      ])
-
+      ]
+      
     })
     .catch(PlayerStatus.NotFoundError, function() {
 
