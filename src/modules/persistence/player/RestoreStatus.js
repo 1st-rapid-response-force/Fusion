@@ -44,7 +44,7 @@ module.exports = function(arguments) {
     .catch(PlayerStatus.NotFoundError, function() {
 
       // Return false if not found so the server can correctly handle it
-      return JSON.parse('["","","TRYK_U_B_ARO1_BLK_CombatUniform",[],"",[],"",[],"",["","","",""],[],"",["","","",""],[],"",["","","",""],[],["ItemMap","ItemCompass","tf_microdagr","tf_anprc152_1"],"",""]')
+      return JSON.parse('[0,0,100,[0,0,0,0,0,0],[],[],[],1,80,[],[80,120],100,[],0,[],0,0,0,[0,0,0,0,0,0],100,"false","false","false",0,"false","false",[],[],[]]')
 
     })
 
