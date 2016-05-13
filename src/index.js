@@ -76,7 +76,7 @@ var restoreStatusHandler = require('./modules/persistence/player/RestoreStatus')
 register(rpc, 'restore_player_status', restoreStatusHandler)
 
 // Register Save Qualification handler
-var saveQualification = require('./modules/training/player/SaveQualification')
+var saveQualification = require('./modules/training/SaveQualification')
 register(rpc, 'save_qualification', saveQualification)
 
 // Register Range Begin Handler
