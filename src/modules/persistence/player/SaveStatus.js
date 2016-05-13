@@ -1,8 +1,8 @@
 /*
   Persist the serialized information that is saved in addition to any player
 */
-var ServerStore = require('../../datastores/ServerMemory'),
-  PlayerStatus = require('../../datastores/models/PlayerStatus')
+var ServerStore = require('../../../datastores/ServerMemory'),
+  PlayerStatus = require('../../../datastores/models/PlayerStatus')
 
 module.exports = function(arguments) {
 

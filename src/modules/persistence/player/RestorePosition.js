@@ -3,8 +3,8 @@
 
   Takes the server and player GUID as arguments so that it can correctly support multi home persistence.
 */
-var ServerStore = require('../../datastores/ServerMemory'),
-  Position = require('../../datastores/models/Position')
+var ServerStore = require('../../../datastores/ServerMemory'),
+  Position = require('../../../datastores/models/Position')
 
 module.exports = function(arguments) {
 

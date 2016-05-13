@@ -1,8 +1,8 @@
 /*
   Persist the passed position of the unit to the datastore.
 */
-var ServerStore = require('../../datastores/ServerMemory'),
-  Position = require('../../datastores/models/Position')
+var ServerStore = require('../../../datastores/ServerMemory'),
+  Position = require('../../../datastores/models/Position')
 
 module.exports = function(arguments) {
 

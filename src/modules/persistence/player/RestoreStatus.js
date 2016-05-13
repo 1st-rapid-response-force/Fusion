@@ -1,8 +1,8 @@
 /*
   Restore the Player Status of a provided player
 */
-var ServerStore = require('../../datastores/ServerMemory'),
-  PlayerStatus = require('../../datastores/models/PlayerStatus')
+var ServerStore = require('../../../datastores/ServerMemory'),
+  PlayerStatus = require('../../../datastores/models/PlayerStatus')
 
 module.exports = function(arguments) {
 

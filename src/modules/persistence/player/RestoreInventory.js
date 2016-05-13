@@ -1,8 +1,8 @@
 /*
   Retrieve the serialized inventory of the unit from the datastore
 */
-var ServerStore = require('../../datastores/ServerMemory'),
-  Inventory = require('../../datastores/models/Inventory')
+var ServerStore = require('../../../datastores/ServerMemory'),
+  Inventory = require('../../../datastores/models/Inventory')
 
 module.exports = function(arguments) {
 
